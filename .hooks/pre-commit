@@ -18,14 +18,18 @@ fi
 
 for FILE in $STAGED_FILES
 do
-  eslint "$FILE"
+  index=$(expr index "$FILE" ".eslintrc.js")
+  if test $index -ne 0
+  then 
+    eslint "$FILE"
 
-  if [[ "$?" == 0 ]]; then
-    echo "\t\033[32mESLint Passed: $FILE\033[0m"
-  else
-    echo "\t\033[41mESLint Failed: $FILE\033[0m"
-    PASS=false
-  fi
+    if [[ "$?" == 0 ]]; then
+      echo "\t\033[32mESLint Passed: $FILE\033[0m"
+    else
+      echo "\t\033[41mESLint Failed: $FILE\033[0m"
+      PASS=false
+    fi
+  fi  
 done
 
 echo "\nJavascript validation completed!\n"
