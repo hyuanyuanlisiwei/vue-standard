@@ -22,16 +22,17 @@ do
   zero=0
   if [ $index -gt $zero ]
   then 
-    eslint "$FILE"
+    echo '没有找到'
+    #eslint "$FILE"
 
-    if [[ "$?" == 0 ]]; then
-      echo "\t\033[32mESLint Passed: $FILE\033[0m"
-    else
-      echo "\t\033[41mESLint Failed: $FILE\033[0m"
-      PASS=false
-    fi
+    #if [[ "$?" == 0 ]]; then
+     # echo "\t\033[32mESLint Passed: $FILE\033[0m"
+    #else
+     # echo "\t\033[41mESLint Failed: $FILE\033[0m"
+      #PASS=false
+    #fi
   else
-    echo $FILE  
+    echo '找到了'  
   fi  
 done
 
