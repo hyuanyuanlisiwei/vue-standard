@@ -92,7 +92,9 @@ export default {
     }
   },
   methods:{
-    fun:function(){
+    fun:function(a){
+      console.log(123);
+      return;
       console.log(123);
     }
   }
