@@ -19,6 +19,8 @@ fi
 for FILE in $STAGED_FILES
 do
   index=$(expr index "$FILE" ".eslintrc.js")
+  echo $FILE
+  echo $index
   if [[ $index != 0]];
   then 
     eslint "$FILE"
