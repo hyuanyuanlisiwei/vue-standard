@@ -94,6 +94,8 @@ export default {
     methods:{
         fun:function(a){
             console.log(123);
+
+
             return;
             console.log(123);
         }
