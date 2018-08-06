@@ -67,6 +67,5 @@ module.exports = {
         "no-multi-assign": 2, //禁止连续赋值
         "no-nested-ternary": 2, //禁用嵌套的三元表达式
         "arrow-body-style": 2 //要求箭头函数体使用大括号
-
     }
 }

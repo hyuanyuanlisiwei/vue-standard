@@ -85,21 +85,19 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'HelloWorld',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        }
+    },
+    methods:{
+        fun:function(a){
+            console.log(123);
+            return;
+            console.log(123);
+        }
     }
-  },
-  methods:{
-    fun:function(a){
-      console.log(123);
-
-      
-      return;
-      console.log(123);
-    }
-  }
 }
 </script>
 
